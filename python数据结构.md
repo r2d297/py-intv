@@ -63,45 +63,6 @@ while i < len(arr):
     i = (i + 1) % len(arr)
 ```
 
-# Stack
-
-```python
-#List直接当Stack用(最简单直接)
-
-#创建空栈
-stack=[]
-
-#入栈 - 使用append()
-stack.append(1)
-print(f"入栈后: {stack}")
-
-#查看栈顶元素
-if stack:
-	top=stack[-1]
-	print(f"栈顶元素: {top}")
-
-#出栈
-popped = stack.pop()
-
-#检查栈是否为空
-is_empty = len(stack) == 0
-
-#获取栈的大小
-size=len(stack)
-
-#使用collections.deque(性能更好的选择)
-stack = deque()
-#入栈
-stack.append('A')
-#出栈
-popped=stack.pop()
-
-#查看栈顶
-if stack:
-	top=stack[-1]
-	print(f"栈顶元素: {top}")
-
-```
 
 # Queue
 
