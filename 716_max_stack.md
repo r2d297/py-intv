@@ -33,5 +33,3 @@ SortedDict (按值排序，value → 节点列表)
 - 链表保证了 O(1) 拿到栈顶、删除任意节点  
 - SortedDict 保证了 O(log n) 找最大值并定位到对应节点  
 - 删除最大值所需的链表节点引用已经在 `SortedDict` 里存着，所以可以 O(1) 精确删除  
-
-要不要我直接在你现在这个空的 `MaxStack` 类里，把这个最优实现帮你填好，并改成可以直接在 LeetCode 上提交的版本？这样你直接 Ctrl+C / Ctrl+V 就能 AC。
