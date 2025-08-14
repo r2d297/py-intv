@@ -4,9 +4,33 @@
 
 给定一个起始IP地址和需要覆盖的地址数量n，要求用最少的CIDR块来精确覆盖[ip, ip+n-1]范围内的所有地址。
 
+LeetCode 751的核心就是你之前问的两个位运算：
+
+start & (-start)：找最大对齐块
+1 << (n.bit_length() - 1)：找最大可用块
+这正好结合了我们讨论的所有概念：lowbit操作 + CIDR对齐 + 贪心算法！
+
 ## 核心思想
 
 使用**贪心算法**：在每一步都选择能使用的最大CIDR块，直到覆盖完所有地址。
+
+LeetCode 751 - IP to CIDR
+这是最经典的CIDR题目，核心挑战是：
+
+问题：给定起始IP和数量n，返回最少的CIDR块来覆盖这个范围
+
+算法核心：
+
+贪心策略：每次创建最大可能的CIDR块
+两个约束：
+对齐约束：start & (-start) - lowbit操作
+数量约束：1 << (n.bit_length() - 1) - 你之前问的那个公式！
+复杂度：时间O(log n)，空间O(1)
+
+相关题目 45
+LeetCode 468 - Validate IP Address：验证IPv4/IPv6格式
+LeetCode 93 - Restore IP Addresses：字符串恢复IP地址
+
 
 ## 关键概念
 
