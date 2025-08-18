@@ -4,15 +4,17 @@ from typing import List
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        res = []      # result container 
+        
         # if matrix is empty, return empty result
         if not matrix or not matrix[0]:
-            return []
+            return res
+        
         # m rows, n cols
-        m, n = len(matrix), len(matrix[0])
+        row, col = len(matrix), len(matrix[0])
         # boundaries for current layer
-        top, bottom = 0, m - 1          # current top row index, bottom row index
-        left, right = 0, n - 1          # current left col index, right col index
-        res: List[int] = []             # result container
+        top, bottom = 0, row  - 1          # current top row index, bottom row index
+        left, right = 0, col - 1          # current left col index, right col index   
 
         # loop until boundaries cross
         while top <= bottom and left <= right:

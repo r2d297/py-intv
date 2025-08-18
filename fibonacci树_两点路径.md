@@ -446,7 +446,7 @@ down_moves = "RL"                    # 从根到7的路径
 
 你的直觉是对的！确实可以利用斐波那契树的数学性质来避免完整遍历。让我提供一个使用动态规划的优化解决方案：
 
-
+```python
 
 class FibonacciTreePathFinder:
     def __init__(self, max_order=50):
@@ -632,7 +632,7 @@ if __name__ == "__main__":
     for order in [2, 3, 4]:
         visualize_fibonacci_tree(order)
 
-
+```
 
 ## 动态规划优化的核心思想
 
