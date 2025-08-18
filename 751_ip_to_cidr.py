@@ -1,6 +1,6 @@
 from typing import List
 
-def ipToCIDR(self, ip: str, n: int) -> list[str]:
+def ipToCIDR(ip: str, n: int) -> list[str]:
     """
     LeetCode 751 - IP to CIDR
     
@@ -11,7 +11,7 @@ def ipToCIDR(self, ip: str, n: int) -> list[str]:
     2. 使用贪心算法，每次创建最大可能的CIDR块
     3. 最大块大小由两个因素限制：
     - 对齐约束：start & (-start) 
-    - 剩余IP数量：n
+    - 剩余IP数量：remaining
     """
     
     def ip_to_int(ip_str):
