@@ -1,5 +1,4 @@
 
-# Online Python - IDE, Editor, Compiler, Interpreter
 import threading
 import time
 from random import randint
